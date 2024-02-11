@@ -41,7 +41,7 @@ jobs:
           path: release/
 
       - run: |
-          cp LICENSE README.md release/
+          cp LICENSE release/
 
       - name: Archive release
         run: |

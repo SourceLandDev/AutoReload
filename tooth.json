@@ -1,0 +1,27 @@
+{
+    "format_version": 2,
+    "tooth": "github.com/SourceLandDev/AutoReload",
+    "version": "1.0.0",
+    "info": {
+        "name": "AutoReload",
+        "description": "Automatically reload items when they are used up.",
+        "author": "SourceLand Developers",
+        "tags": ["Functional", "Helper", "Easy"]
+    },
+    "asset_url": "https://github.com/SourceLandDev/AutoReload/releases/download/v1.1.0/AutoReload-windows-x64.zip",
+    "prerequisites": {
+        "github.com/LiteLDev/LeviLamina": "0.7.x"
+    },
+    "files": {
+        "place": [
+            {
+                "src": "AutoReload/*",
+                "dest": "plugins/AutoReload"
+            }
+        ],
+        "remove": [
+            "plugins/AutoReload/AutoReload.dll",
+            "plugins/AutoReload/manifest.json"
+        ]
+    }
+}
