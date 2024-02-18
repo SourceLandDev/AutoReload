@@ -78,7 +78,7 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
     int  id       = getId();
     int  auxValue = getAuxValue();
     bool result   = origin(a2, a3);
-    if (isNull() && a3.isPlayer()) {
+    if (isNull() &&& a3 && a3.isPlayer()) {
         reloadItem((Player&)a3, id, auxValue);
     }
     return result;
