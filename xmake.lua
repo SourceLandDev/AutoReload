@@ -23,7 +23,7 @@ target("AutoReload") -- Change this to your plugin name.
         "/w44738",
         "/w45204"
     )
-    add_defines("NOMINMAX", "UNICODE")
+    add_defines("NOMINMAX", "UNICODE", "_HAS_CXX23=1")
     add_files("src/**.cpp")
     add_includedirs("src")
     add_packages("levilamina")
@@ -47,6 +47,6 @@ target("AutoReload") -- Change this to your plugin name.
             pluginFile = path.filename(target:targetfile()),
             pluginVersion = major .. "." .. minor .. "." .. patch,
         }
-        
+
         plugin_packer.pack_plugin(target,plugin_define)
     end)
