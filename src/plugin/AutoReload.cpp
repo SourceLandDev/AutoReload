@@ -20,7 +20,7 @@ bool AutoReload::enable() {
 }
 
 bool AutoReload::disable() {
-    return false;
+    return true;
 }
 
 } // namespace auto_reload
