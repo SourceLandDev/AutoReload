@@ -5,7 +5,7 @@ add_repositories("liteldev-repo https://github.com/LiteLDev/xmake-repo.git")
 -- add_requires("levilamina x.x.x") for a specific version
 -- add_requires("levilamina develop") to use develop version
 -- please note that you should add bdslibrary yourself if using dev version
-add_requires("levilamina develop")
+add_requires("levilamina")
 
 if not has_config("vs_runtime") then
     set_runtimes("MD")
@@ -23,7 +23,7 @@ target("AutoReload") -- Change this to your plugin name.
         "/w44738",
         "/w45204"
     )
-    add_defines("NOMINMAX", "UNICODE", "_HAS_CXX23=1")
+    add_defines("NOMINMAX", "UNICODE")
     add_files("src/**.cpp")
     add_includedirs("src")
     add_packages("levilamina")
@@ -47,6 +47,6 @@ target("AutoReload") -- Change this to your plugin name.
             pluginFile = path.filename(target:targetfile()),
             pluginVersion = major .. "." .. minor .. "." .. patch,
         }
-
+        
         plugin_packer.pack_plugin(target,plugin_define)
     end)
